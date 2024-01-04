@@ -1,0 +1,49 @@
+@import '../app';
+
+.mv {
+    height: 100vh;
+    background-image: url(../../images/top/mv.jpg);
+    color: #fff;
+
+    &:after {
+        top: auto;
+        bottom: vw(153);
+
+        @include mq(md) {
+            bottom: svw(108);
+        }
+    }
+
+    &__content {
+        position: absolute;
+        left: vw(150);
+        bottom: vw(100);
+
+        @include mq(md) {
+            left: svw(25);
+            bottom: svw(42);
+        }
+    }
+
+    &__title {
+        margin-left: vw(-3);
+        font-size: vw(50);
+        margin-bottom: vw(10);
+        font-weight: 400;
+
+        @include mq(md) {
+            margin-left: svw(-3);
+            font-size: svw(36);
+            margin-bottom: svw(10);
+        }
+    }
+
+    &__desc {
+        font-size: vw(16);
+        color: #D9D9D9;
+
+        @include mq(md) {
+            font-size: svw(14);
+        }
+    }
+}

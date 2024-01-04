@@ -1,0 +1,25 @@
+---
+// Data
+import careerData from "../../data/career.json";
+---
+
+<div class="section career" id="career">
+    <h2 class="section__title">Career</h2>
+    <ul class="career__list list">
+        {
+            careerData.map((data) => (
+                <li class="list__row">
+                    <span class="list__year">{data.year}</span>
+                    <div>
+                        <span class="list__title">{data.title}</span>
+                        <span set:html={data.desc} class="list__desc" />
+                    </div>
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+<style>
+    @import "../../styles/top/_career.scss";
+</style>

@@ -1,0 +1,35 @@
+@import '../app';
+
+.contact {
+    color: white;
+    background-image: url(../../images/top/contact.jpg);
+    height: 100vh;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: vw(12);
+        max-width: vw(360);
+        margin-top: vw(56);
+
+        @include mq(md) {
+            gap: svw(12);
+            max-width: svw(360);
+            margin-top: svw(56);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: vw(12);
+
+        @include mq(md) {
+            gap: svw(12);
+        }
+
+        .button {
+            width: 50%;
+        }
+    }
+}

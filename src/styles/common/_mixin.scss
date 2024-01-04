@@ -1,0 +1,32 @@
+// PC用 vw変換
+@function vw($value) {
+    $result: calc($value / $pc) * 100;
+    @return $result * 1vw;
+}
+
+// SP用 VW計算
+@function svw($value) {
+    $result: calc($value / $sp) * 100;
+    @return $result * 1vw;
+}
+
+// メディアクエリ
+@mixin mq($breakpoint, $type: max) {
+    $width: map-get($breakpoints, $breakpoint);
+
+    @if $type ==min {
+        @media (min-width: $width) {
+            @content;
+        }
+    }
+
+    @else if $type ==max {
+        @media (max-width: ($width - 1px)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Invalid type: #{$type}. Use 'min' or 'max'.";
+    }
+}

@@ -1,0 +1,15 @@
+// 画面幅
+$pc: 1440;
+$sp: 375;
+
+// ブレイクポイント
+$breakpoints: (
+    pc: 1025px,
+    md: 768px,
+    sp: 375px
+);
+
+// Colors
+$text: #606060;
+$line-gray: #E5E5E5;
+$orange: #F58020;

@@ -1,0 +1,15 @@
+// PCでのみ表示
+.-pc {
+    @include mq(md) {
+        display: none;
+    }
+}
+
+// SPでのみ表示
+.-sp {
+    display: none;
+
+    @include mq(md) {
+        display: inline-block;
+    }
+}

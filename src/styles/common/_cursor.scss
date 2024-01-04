@@ -1,0 +1,37 @@
+#cursor {
+    position: fixed;
+    transition: .15s;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: -10px 0 0 -10px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+
+    &.-hover {
+        @include mq(md, min) {
+            backdrop-filter: blur(4px);
+            background: rgba($color: rgb(108, 108, 108), $alpha: .3);
+            border: 1px solid #fff;
+            cursor: none;
+            background-position: center;
+            background-size: 102% 102%;
+            width: 100px;
+            height: 100px;
+            margin: -50px 0 0 -50px;
+        }
+    }
+
+    &.-thumb {
+        background-image: url(../../images/top/cursor_thumb.svg);
+    }
+
+    &.-prev {
+        background-image: url(../../images/top/cursor_prev.svg);
+    }
+
+    &.-next {
+        background-image: url(../../images/top/cursor_next.svg);
+    }
+}

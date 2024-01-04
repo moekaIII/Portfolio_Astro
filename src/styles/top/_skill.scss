@@ -1,0 +1,55 @@
+@import '../app';
+
+.skill {
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+
+        @include mq(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        height: vw(630);
+        width: calc(100% / 3);
+        padding: vw(100) 0 0;
+        margin-top: vw(-8);
+
+        @include mq(md) {
+            height: auto;
+            padding: svw(30) 0 0;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        &:nth-of-type(n+1) {
+            border-left: 1px solid $line-gray;
+        }
+    }
+
+    &__title {
+        font-size: vw(20);
+        font-weight: 400;
+        margin-bottom: vw(30);
+
+        @include mq(md) {
+            font-size: svw(18);
+            margin-bottom: svw(10);
+        }
+    }
+
+    &__item {
+        font-size: vw(14);
+        margin-bottom: vw(10);
+
+        @include mq(md) {
+            font-size: svw(12);
+            margin-bottom: svw(10);
+        }
+    }
+}

@@ -1,0 +1,208 @@
+@import '../app';
+
+.works {
+    background-image: url(../../images/top/works.jpg);
+    position: relative;
+    overflow: hidden;
+
+    @include mq(md) {
+        height: 100vh;
+    }
+
+    &.-open {
+        background-image: url(../../images/top/works_dark.jpg);
+        padding-left: 0;
+        padding-right: 0;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        .section__title {
+            color: white;
+            padding-left: vw(150);
+
+            @include mq(md) {
+                padding-left: svw(25);
+            }
+        }
+    }
+
+    &__desc {
+        margin: vw(20) 0 vw(40);
+
+        @include mq(md) {
+            margin: svw(20) 0 svw(40);
+        }
+    }
+
+    &__link {
+        transition: .2s;
+        color: currentColor;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.swiper-slide.work {
+    margin-top: vw(55);
+    width: 100%;
+
+    @include mq(md) {
+        margin-top: svw(20);
+    }
+}
+
+.work {
+    padding-bottom: vw(50);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: vw(72);
+        width: vw(1140);
+        margin: 0 auto;
+
+        @include mq(md) {
+            flex-direction: column;
+            gap: 0;
+            width: svw(330);
+        }
+    }
+
+    &__thumb {
+        width: vw(600);
+        height: vw(400);
+        overflow-y: auto;
+        transition: .2s;
+        display: flex;
+        align-items: center;
+
+        @include mq(md) {
+            width: 100%;
+            height: svw(200);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-position: center center;
+            overflow-y: auto;
+        }
+    }
+
+    &__subtitle {
+        font-size: vw(20);
+        margin-bottom: vw(10);
+        font-weight: 400;
+
+        @include mq(md) {
+            font-size: svw(14);
+            margin: svw(10) 0 svw(10);
+        }
+    }
+
+    &__title {
+        font-size: vw(30);
+        margin-bottom: vw(10);
+        color: white;
+
+        @include mq(md) {
+            font-size: svw(20);
+            margin-bottom: svw(10);
+        }
+    }
+
+    &__role {
+        font-size: vw(18);
+        margin-bottom: vw(40);
+
+        @include mq(md) {
+            font-size: svw(14);
+            margin-bottom: svw(20);
+        }
+    }
+
+    &__desc {
+        font-size: vw(16);
+        line-height: 190%;
+        color: rgba($color: #fff, $alpha: .7);
+
+        @include mq(md) {
+            font-size: svw(12);
+        }
+    }
+
+    &__content {
+        color: white;
+        width: vw(460);
+
+        @include mq(md) {
+            width: 100%;
+        }
+    }
+}
+
+.swiper-container {
+
+    .works__prev,
+    .works__next {
+        width: vw(30);
+        height: vw(30);
+        display: inline-block;
+        position: absolute;
+        bottom: vw(340);
+        z-index: 1000;
+
+        @include mq(md) {
+            top: auto;
+            bottom: vw(230);
+            width: svw(22);
+            height: svw(22);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .works {
+        &__prev {
+            left: vw(30);
+
+            @include mq(md) {
+                left: svw(16);
+            }
+        }
+
+        &__next {
+            right: vw(30);
+
+            @include mq(md) {
+                right: svw(16);
+            }
+        }
+
+        &__scrollbar.swiper-scrollbar-horizontal {
+            bottom: vw(0);
+            height: vw(3);
+            background-color: #808080;
+            scale: 0.8;
+
+            @include mq(md) {
+                bottom: svw(40);
+                height: svw(3);
+                scale: 0.86;
+            }
+
+            .swiper-scrollbar-drag {
+                height: 100%;
+                background-color: white;
+            }
+        }
+    }
+}

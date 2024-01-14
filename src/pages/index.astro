@@ -1,26 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
 
-import MainVisual from "../components/top/MainVisual.astro";
-import Career from "../components/top/Career.astro";
-import Works from "../components/top/Works.jsx";
-import Skill from "../components/top/Skill.astro";
-import Contact from "../components/top/Contact.astro";
+import MainVisual from '../components/top/MainVisual.astro'
+import Career from '../components/top/Career.astro'
+import Works from '../components/top/Works.jsx'
+import Skill from '../components/top/Skill.astro'
+import Contact from '../components/top/Contact.astro'
 
 // Style
-import "../styles/top/_section.scss";
+import '../styles/top/_section.scss'
 ---
 
-<Layout title="Ihara Moeka">
-	<main class="section__wrap">
-		<MainVisual />
-		<Career />
-		<Works client:idle />
-		<Skill />
-		<Contact />
-	</main>
+<Layout title='Ihara Moeka'>
+    <main class='section__wrap'>
+        <MainVisual />
+        <Career />
+        <Works client:idle />
+        <Skill />
+        <!-- MEMO: お問合せ機能は準備中 -->
+        <!-- <Contact /> -->
+    </main>
 </Layout>
 
 <script>
-	import "../js/top.js";
+    import '../js/top.js'
 </script>

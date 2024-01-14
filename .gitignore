@@ -4,7 +4,7 @@ src/images/top/thumbs
 src/data/works.json
 
 # build output
-dist/
+./functions/static/
 
 # generated types
 .astro/

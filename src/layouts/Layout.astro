@@ -1,31 +1,42 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <title>{title}</title>
+        <meta name='description' content='Astro description' />
+        <meta name='viewport' content='width=device-width' />
+        <meta name='generator' content={Astro.generator} />
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<div id="cursor"></div>
-		<slot />
-	</body>
+        <!-- Favicon -->
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+
+        <!-- metas -->
+        <meta property='og:title' content={title} />
+        <meta
+            property='og:description'
+            content='伊原 萌夏のポートフォリオです。UIUX設計 / デザイン / コーディング / フロントエンジニアリング'
+        />
+        <meta property='og:image' content='https://ihara.web.app/ogp.jpg' />
+        <meta property='og:url' content='https://ihara.web.app' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:image' content='https://ihara.web.app/ogp.jpg' />
+
+        <!-- Fonts -->
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='cursor'></div>
+        <slot />
+    </body>
 </html>

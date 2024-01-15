@@ -37,6 +37,10 @@ const { title } = Astro.props;
     </head>
     <body>
         <div id='cursor'></div>
+        <div class='loading js-loading'></div>
         <slot />
     </body>
 </html>
+<script>
+    import '../js/common.js';
+</script>
